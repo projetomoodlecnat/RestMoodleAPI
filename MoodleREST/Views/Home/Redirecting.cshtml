@@ -1,0 +1,37 @@
+﻿<!DOCTYPE html>
+<html>
+
+@{
+    try
+    {
+        <!-- {0} = Posição da Connection String no índice do arquivo XML (QuerySelector.xml) -->
+        WebRequest wbr = WebRequest.Create(String.Format("http://localhost:37006/api/connectionstring?c={0}", "0"));
+        DynamicJsonArray jsonArray;
+        wbr.Method = "GET";
+        wbr.ContentType = "aplication/json";
+        using (Stream stream = wbr.GetResponse().GetResponseStream())
+        {
+            using (StreamReader streamReader = new StreamReader(stream))
+            {
+            <!-- Transformar num array os resultados conseguidos da API (DbType no index 0 e ConnectionString no index 1)-->
+                jsonArray = Json.Decode(streamReader.ReadToEnd());
+            }
+        }
+
+        <!-- {0} = Tipo da base de dados
+             {1} = Connection String
+             {2} = Nome da tabela alvo do select -->
+        wbr = WebRequest.Create(String.Format("http://localhost:37006/api/selector{0}?dbconnector={1}&tblname={2}", jsonArray[0], jsonArray[1], "mdl_user"));
+        using (Stream stream = wbr.GetResponse().GetResponseStream())
+        {
+            using (StreamReader streamReader = new StreamReader(stream))
+            {
+                <!-- Transformar a tabela em um array dinâmico JSON -->
+                jsonArray = Json.Decode(streamReader.ReadToEnd());
+            }
+        }
+    } catch (Exception ex)
+    {
+        Response.Write(ex.Message);
+    }
+}
