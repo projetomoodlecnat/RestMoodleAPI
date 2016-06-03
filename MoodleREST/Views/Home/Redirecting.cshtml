@@ -21,7 +21,7 @@
         <!-- {0} = Tipo da base de dados
              {1} = Connection String
              {2} = Nome da tabela alvo do select -->
-        wbr = WebRequest.Create(String.Format("http://localhost:37006/api/selector{0}?dbconnector={1}&tblname={2}", jsonArray[0], jsonArray[1], "mdl_user"));
+        wbr = WebRequest.Create(String.Format("http://localhost:37006/api/selector{0}?connectionString={1}&tblname={2}", jsonArray[0], jsonArray[1], "mdl_user"));
         using (Stream stream = wbr.GetResponse().GetResponseStream())
         {
             using (StreamReader streamReader = new StreamReader(stream))

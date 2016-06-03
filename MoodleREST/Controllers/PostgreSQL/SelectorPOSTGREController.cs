@@ -18,7 +18,7 @@ namespace MoodleREST.Controllers.PostgreSQL
             List<object> listaResultados2 = new List<object>();
             try
             {
-                using (OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["dbconnector"]))
+                using (OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["connectionString"]))
                 {
                     connection.Open();
                     OdbcDataAdapter adapter = new OdbcDataAdapter(new OdbcCommand(System.Web.HttpContext.Current.Request["query"], connection));
@@ -50,7 +50,7 @@ namespace MoodleREST.Controllers.PostgreSQL
             List<object> listaResultados2 = new List<object>();
             try
             {
-                using (OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["dbconnector"]))
+                using (OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["connectionString"]))
                 {
                     connection.Open();
                     OdbcDataAdapter adapter = new OdbcDataAdapter(new OdbcCommand(String.Format("select * from {0}", System.Web.HttpContext.Current.Request["tblname"]), connection));

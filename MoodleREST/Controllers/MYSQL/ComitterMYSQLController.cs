@@ -16,7 +16,7 @@ namespace MoodleREST.Controllers.MYSQL
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["dbconnector"]))
+                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["connectionString"]))
                 {
                     connection.Open();
                     MySqlCommand msc = new MySqlCommand(System.Web.HttpContext.Current.Request["query"], connection);

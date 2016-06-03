@@ -15,7 +15,7 @@ namespace MoodleREST.Controllers.PostgreSQL
         {
             try
             {
-                OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["dbconnector"]);
+                OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["connectionString"]);
                 connection.Open();
                 OdbcCommand command = new OdbcCommand(System.Web.HttpContext.Current.Request["query"], connection);
                 int linhasAfetadas = command.ExecuteNonQuery();

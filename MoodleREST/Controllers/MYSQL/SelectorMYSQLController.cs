@@ -15,7 +15,7 @@ namespace MoodleREST.Controllers
             List<object> listaResultados2 = new List<object>();
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["dbconnector"]))
+                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["connectionString"]))
                 {
                     connection.Open();
                     MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(System.Web.HttpContext.Current.Request["query"], connection));
@@ -46,7 +46,7 @@ namespace MoodleREST.Controllers
             List<object> listaResultados2 = new List<object>();
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["dbconnector"]))
+                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["connectionString"]))
                 {
                     connection.Open();
                     MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(String.Format("select * from {0}", System.Web.HttpContext.Current.Request["tblname"]), connection));

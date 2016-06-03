@@ -24,7 +24,8 @@ namespace MoodleREST.Controllers
                     System.Web.HttpContext.Current.Application.Add("ds", ds);
                 }
                 ds = (DataSet)System.Web.HttpContext.Current.Application["ds"];
-                return new String[] { ds.Tables[0].Rows[int.Parse(Request.RequestUri.Query.Substring(this.Request.RequestUri.Query.IndexOf('=') + 1))][0].ToString(), ds.Tables[0].Rows[int.Parse(Request.RequestUri.Query.Substring(this.Request.RequestUri.Query.IndexOf('=') + 1))][1].ToString() };
+                int selectedIndex = int.Parse(HttpContext.Current.Request["connectionStringIndex"]);
+                return new String[] { ds.Tables[0].Rows[selectedIndex][0].ToString(), ds.Tables[0].Rows[selectedIndex][1].ToString(), ds.Tables[0].Rows[selectedIndex][2].ToString(), ds.Tables[0].Rows[selectedIndex][3].ToString() };
             } catch (Exception ex)
             {
                 return new String[] { ex.ToString() };

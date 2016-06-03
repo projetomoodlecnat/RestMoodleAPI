@@ -22,9 +22,9 @@
                 <ul class="nav navbar-nav">
                     <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, null)</li>
                     <li>@Html.ActionLink("API", "Index", "Help", new { area = "" }, null)</li>
-                    <form action="/api/selectormysql" method="post"><input type="text" name="dbconnector"/><input type="text" name="query" /><input type="submit" value="Submit to SELECTOR POST" /></form>
-                    <form action="/api/selectormysql"><input style="visibility:hidden" type="text" value="Server=localhost;Uid=root;Database=moodle" name="dbconnector"/><input type="text" name="tblname" /><input type="submit" value="Submit to SELECTOR GET" /></form>
-                    <form action="/api/comittermysql" method="post"><input type="text" name="dbconnector" /><input type="text" name="query" /><input type="submit" value="Submit to COMMITER POST" /></form>
+                    <form action="/api/selectormysql" method="post"><input type="text" name="connectionString"/><input type="text" name="query" /><input type="submit" value="Submit to SELECTOR POST" /></form>
+                    <form action="/api/selectormysql"><input style="visibility:hidden" type="text" value="Server=localhost;Uid=root;Database=moodle" name="connectionString"/><input type="text" name="tblname" /><input type="submit" value="Submit to SELECTOR GET" /></form>
+                    <form action="/api/comittermysql" method="post"><input type="text" name="connectionString" /><input type="text" name="query" /><input type="submit" value="Submit to COMMITER POST" /></form>
                 </ul>
             </div>
         </div>
