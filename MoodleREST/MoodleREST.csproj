@@ -163,8 +163,6 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MSSQL\ComitterMSSQLController.cs" />
-    <Compile Include="Controllers\MSSQL\SelectorMSSQLController.cs" />
     <Compile Include="Controllers\MYSQL\ComitterMYSQLController.cs" />
     <Compile Include="Controllers\PostgreSQL\ComitterPOSTGREController.cs" />
     <Compile Include="Controllers\PostgreSQL\SelectorPOSTGREController.cs" />
