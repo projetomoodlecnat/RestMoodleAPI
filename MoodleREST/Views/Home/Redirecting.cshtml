@@ -4,7 +4,7 @@
 @{
     try
     {
-        <!-- {0} = Posição da Connection String no índice do arquivo XML (QuerySelector.xml) -->
+        <!-- {0} = Posição da Connection String no índice do arquivo XML (ConnectionStrings.xml) -->
         WebRequest wbr = WebRequest.Create(String.Format("http://localhost:37006/api/connectionstring?c={0}", "0"));
         DynamicJsonArray jsonArray;
         wbr.Method = "GET";

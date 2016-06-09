@@ -18,12 +18,12 @@ namespace MoodleREST.Controllers
         {
             try
             {
-                if (System.Web.HttpContext.Current.Application["ds"] == null)
+                if (System.Web.HttpContext.Current.Application["ConnectionStrings"] == null)
                 {
-                    ds.ReadXml(AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "/QuerySelector.xml");
-                    System.Web.HttpContext.Current.Application.Add("ds", ds);
+                    ds.ReadXml(AppDomain.CurrentDomain.GetData("DataDirectory").ToString() + "/ConnectionStrings.xml");
+                    System.Web.HttpContext.Current.Application.Add("ConnectionStrings", ds);
                 }
-                ds = (DataSet)System.Web.HttpContext.Current.Application["ds"];
+                ds = (DataSet)System.Web.HttpContext.Current.Application["ConnectionStrings"];
                 int selectedIndex = int.Parse(HttpContext.Current.Request["connectionStringIndex"]);
                 return new String[] { ds.Tables[0].Rows[selectedIndex][0].ToString(), ds.Tables[0].Rows[selectedIndex][1].ToString(), ds.Tables[0].Rows[selectedIndex][2].ToString(), ds.Tables[0].Rows[selectedIndex][3].ToString() };
             } catch (Exception ex)
