@@ -1,0 +1,24 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<connectionStrings>
+  <db>
+    <dbType>mysql</dbType>
+    <connectionString>Server=localhost;Database=moodle</connectionString>
+    <user>root</user>
+    <password></password>
+    <query>select * from mdl_user</query>
+  </db>
+  <db tipo="mssql">Server=localhost;Database=moodle</db>
+  <db tipo="postgresql">Server=localhost;Database=moodle</db>
+</connectionStrings>
+
+<!--
+Template
+  <db> - CONTAINER PRINCIPAL
+    <dbType>mysql</dbType> - TIPO
+    <connectionString>Server=localhost;Database=moodle</connectionString> - CONNECTION STRING
+    <user>root</user> - USUÁRIO
+    <password>""</password> - SENHA
+    <query>select * from mdl_user</query> - N QUERIES[0]
+    <query>select * from mdl_user</query> - N QUERIES[1]
+  </db>
+-->

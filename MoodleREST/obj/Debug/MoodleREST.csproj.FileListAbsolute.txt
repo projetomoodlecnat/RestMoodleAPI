@@ -60,5 +60,4 @@ C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\r
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\Antlr3.Runtime.dll
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\WebGrease.dll
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\Antlr3.Runtime.pdb
-C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\obj\Debug\MoodleREST.csprojResolveAssemblyReference.cache
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\MoodleREST.dll.config

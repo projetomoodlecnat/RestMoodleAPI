@@ -1,6 +1,0 @@
-﻿<?xml version="1.0" encoding="utf-8" ?>
-<connectionStrings>
-  <db tipo="mysql" user="root" password="">Server=localhost;Database=moodle</db>
-  <db tipo="mssql" user="root" password="">Server=localhost;Database=moodle</db>
-  <db tipo="postgresql" user="root" password="">Server=localhost;Database=moodle</db>
-</connectionStrings>
