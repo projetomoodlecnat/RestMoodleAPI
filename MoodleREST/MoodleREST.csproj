@@ -168,13 +168,14 @@
     <Compile Include="Controllers\PostgreSQL\SelectorPOSTGREController.cs" />
     <Compile Include="Controllers\DBPropertiesController.cs" />
     <Compile Include="Controllers\MYSQL\SelectorMYSQLController.cs" />
+    <Compile Include="Controllers\Queries and C String\ConnectionGetterMYSQL.cs" />
+    <Compile Include="Controllers\Queries and C String\QueriesGetterMYSQL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="App_Data\DBProperties.xml" />
     <Content Include="Areas\HelpPage\HelpPage.css" />
     <Content Include="Content\bootstrap-theme.css" />
     <Content Include="Content\bootstrap-theme.min.css" />
