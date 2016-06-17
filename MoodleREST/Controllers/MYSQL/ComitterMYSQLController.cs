@@ -1,10 +1,5 @@
 ﻿using MySql.Data.MySqlClient;
 using System;
-using System.Collections.Generic;
-using System.Data;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
 
 namespace MoodleREST.Controllers.MYSQL
@@ -16,7 +11,9 @@ namespace MoodleREST.Controllers.MYSQL
         {
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["connectionString"]))
+                int selectedIndex = int.Parse(System.Web.HttpContext.Current.Request["connectionIndex"]);
+                String[,] connectionStrings = (String[,])System.Web.HttpContext.Current.Application["ConnectionStrings"];
+                using (MySqlConnection connection = new MySqlConnection(connectionStrings[selectedIndex, 0]))
                 {
                     connection.Open();
                     MySqlCommand msc = new MySqlCommand(System.Web.HttpContext.Current.Request["query"], connection);

@@ -62,3 +62,10 @@ C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\W
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\Antlr3.Runtime.pdb
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\MoodleREST.dll.config
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\obj\Debug\MoodleREST.csprojResolveAssemblyReference.cache
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.dll
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.SqlServer.dll
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework6.Npgsql.dll
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\Npgsql.dll
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.xml
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.SqlServer.xml
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework6.Npgsql.xml

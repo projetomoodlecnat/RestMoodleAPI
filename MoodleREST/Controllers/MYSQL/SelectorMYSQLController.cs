@@ -15,7 +15,9 @@ namespace MoodleREST.Controllers
             List<object> listaResultados2 = new List<object>();
             try
             {
-                using (MySqlConnection connection = new MySqlConnection(System.Web.HttpContext.Current.Request["connectionString"]))
+                int selectedIndex = int.Parse(System.Web.HttpContext.Current.Request["connectionIndex"]);
+                String[,] connectionStrings = (String[,])System.Web.HttpContext.Current.Application["ConnectionStrings"];
+                using (MySqlConnection connection = new MySqlConnection(connectionStrings[selectedIndex,0]))
                 {
                     connection.Open();
                     MySqlDataAdapter adapter = new MySqlDataAdapter(new MySqlCommand(System.Web.HttpContext.Current.Request["query"], connection));

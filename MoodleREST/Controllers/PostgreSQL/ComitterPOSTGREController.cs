@@ -1,10 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Net;
-using System.Net.Http;
 using System.Web.Http;
-using System.Data.Odbc;
+using Npgsql;
 
 namespace MoodleREST.Controllers.PostgreSQL
 {
@@ -15,9 +11,11 @@ namespace MoodleREST.Controllers.PostgreSQL
         {
             try
             {
-                OdbcConnection connection = new OdbcConnection(System.Web.HttpContext.Current.Request["connectionString"]);
+                int selectedIndex = int.Parse(System.Web.HttpContext.Current.Request["connectionIndex"]);
+                String[,] connectionStrings = (String[,])System.Web.HttpContext.Current.Application["ConnectionStrings"];
+                NpgsqlConnection connection = new NpgsqlConnection(connectionStrings[selectedIndex, 0]);
                 connection.Open();
-                OdbcCommand command = new OdbcCommand(System.Web.HttpContext.Current.Request["query"], connection);
+                NpgsqlCommand command = new NpgsqlCommand(System.Web.HttpContext.Current.Request["query"], connection);
                 int linhasAfetadas = command.ExecuteNonQuery();
                 connection.Close();
                 return String.Format("Query executada com sucesso. {0} linhas afetadas.", linhasAfetadas);
