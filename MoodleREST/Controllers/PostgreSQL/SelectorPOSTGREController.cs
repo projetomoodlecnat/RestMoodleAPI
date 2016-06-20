@@ -24,6 +24,12 @@ namespace MoodleREST.Controllers.PostgreSQL
                     NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(new NpgsqlCommand(System.Web.HttpContext.Current.Request["query"], connection));
                     DataTable dta = new DataTable();
                     adapter.Fill(dta);
+                    listaResultados = new List<object>();
+                    foreach (DataColumn dtc in dta.Columns)
+                    {
+                        listaResultados.Add(dtc.ToString().ToUpper());
+                    }
+                    listaResultados2.Add(listaResultados);
                     foreach (DataRow dr in dta.Rows)
                     {
                         listaResultados = new List<object>();
