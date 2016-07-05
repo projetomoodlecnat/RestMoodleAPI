@@ -48,6 +48,8 @@ namespace MoodleREST.Controllers
             return listaResultados2;
         }
 
+
+        // Deprecrated
         public List<object> getSelect()
         {
             List<object> listaResultados;

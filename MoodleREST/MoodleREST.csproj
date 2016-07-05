@@ -178,14 +178,18 @@
     <Compile Include="Areas\HelpPage\SampleGeneration\SampleDirection.cs" />
     <Compile Include="Areas\HelpPage\SampleGeneration\TextSample.cs" />
     <Compile Include="Areas\HelpPage\XmlDocumentationProvider.cs" />
+    <Compile Include="Controllers\DBSitesController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\MYSQL\ComitterMYSQLController.cs" />
-    <Compile Include="Controllers\PostgreSQL\ComitterPOSTGREController.cs" />
+    <Compile Include="Controllers\MSSQL\CommitterMSSQLController.cs" />
+    <Compile Include="Controllers\MSSQL\SelectorMSSQLController.cs" />
+    <Compile Include="Controllers\MYSQL\CommitterMYSQLController.cs" />
+    <Compile Include="Controllers\PostgreSQL\CommitterPOSTGREController.cs" />
     <Compile Include="Controllers\PostgreSQL\SelectorPOSTGREController.cs" />
     <Compile Include="Controllers\DBPropertiesController.cs" />
     <Compile Include="Controllers\MYSQL\SelectorMYSQLController.cs" />
     <Compile Include="Controllers\Queries and C String\ConnectionGetterMYSQL.cs" />
     <Compile Include="Controllers\Queries and C String\QueriesGetterMYSQL.cs" />
+    <Compile Include="Controllers\Queries and C String\SitesGetterMYSQL.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

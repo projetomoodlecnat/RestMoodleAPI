@@ -50,6 +50,8 @@ namespace MoodleREST.Controllers.PostgreSQL
             return listaResultados2;
         }
 
+        // Deprecated
+
         public List<object> getSelect()
         {
             List<object> listaResultados;

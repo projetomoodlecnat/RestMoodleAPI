@@ -4,7 +4,7 @@ using Npgsql;
 
 namespace MoodleREST.Controllers.PostgreSQL
 {
-    public class ComitterPOSTGREController : ApiController
+    public class CommitterPOSTGREController : ApiController
     {
         [System.Web.Http.HttpPost]
         public String postCommit()
