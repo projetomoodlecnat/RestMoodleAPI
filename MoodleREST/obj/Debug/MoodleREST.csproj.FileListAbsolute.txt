@@ -69,3 +69,6 @@ C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\N
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.xml
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework.SqlServer.xml
 C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\EntityFramework6.Npgsql.xml
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\CryptSharp.dll
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\CryptSharp.pdb
+C:\Users\Nudes\Documents\Visual Studio 2015\Projects\MoodleREST\MoodleREST\bin\CryptSharp.xml
