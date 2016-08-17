@@ -69,7 +69,7 @@ namespace MoodleREST.Controllers
                             {
                                 throw new InvalidFieldException("user_password_null");
                             }
-                            if (HttpContext.Current.Request["user"].Equals(""))
+                            if (HttpContext.Current.Request["username"].Equals(""))
                             {
                                 throw new InvalidFieldException("user_non_existent");
                             }
