@@ -6,7 +6,7 @@ namespace MoodleREST.Controllers.MYSQL
 {
     public class CommitterMYSQLController : ApiController
     {
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         public String postCommit()
         {
             try
@@ -19,7 +19,7 @@ namespace MoodleREST.Controllers.MYSQL
                     MySqlCommand msc = new MySqlCommand(System.Web.HttpContext.Current.Request["query"], connection);
                     String rowsAffected = msc.ExecuteNonQuery().ToString();
                     connection.Close();
-                    return String.Format("Commit realizado com sucesso. {0} linhas afetadas.", rowsAffected);
+                    return String.Format("Commit efetuado com sucesso. {0} linhas afetadas.", rowsAffected);
                 }
             }
             catch (Exception ex)

@@ -6,7 +6,7 @@ namespace MoodleREST.Controllers.PostgreSQL
 {
     public class CommitterPOSTGREController : ApiController
     {
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         public String postCommit()
         {
             try
@@ -18,7 +18,7 @@ namespace MoodleREST.Controllers.PostgreSQL
                 NpgsqlCommand command = new NpgsqlCommand(System.Web.HttpContext.Current.Request["query"], connection);
                 int linhasAfetadas = command.ExecuteNonQuery();
                 connection.Close();
-                return String.Format("Query executada com sucesso. {0} linhas afetadas.", linhasAfetadas);
+                return String.Format("Commit efetuado com sucesso. {0} linhas afetadas.", linhasAfetadas);
             } catch (Exception ex)
             {
                 return ex.Message;
