@@ -8,7 +8,8 @@ namespace MoodleREST.Controllers
 {
     public class SelectorMYSQLController : ApiController
     {
-        [System.Web.Http.HttpPost]
+        [HttpPost]
+        [System.Web.Mvc.ValidateInput(false)]
         public List<object> postSelect()
         {
             List<object> listaResultados;

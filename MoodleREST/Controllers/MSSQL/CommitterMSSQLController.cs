@@ -7,6 +7,7 @@ namespace MoodleREST.Controllers.MSSQL
     public class CommitterMSSQLController : ApiController
     {
         [HttpPost]
+        [System.Web.Mvc.ValidateInput(false)]
         public String postCommit()
         {
             try

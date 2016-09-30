@@ -7,6 +7,7 @@ namespace MoodleREST.Controllers.PostgreSQL
     public class CommitterPOSTGREController : ApiController
     {
         [HttpPost]
+        [System.Web.Mvc.ValidateInput(false)]
         public String postCommit()
         {
             try

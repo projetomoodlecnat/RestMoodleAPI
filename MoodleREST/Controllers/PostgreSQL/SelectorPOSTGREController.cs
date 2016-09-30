@@ -9,7 +9,7 @@ namespace MoodleREST.Controllers.PostgreSQL
 {
     public class SelectorPOSTGREController : ApiController
     {
-        [System.Web.Http.HttpPost]
+        [HttpPost]
         [System.Web.Mvc.ValidateInput(false)]
         public List<object> postSelect()
         {
